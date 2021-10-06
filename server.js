@@ -7,10 +7,18 @@ const { MongoClient ,ObjectId } = require('mongodb') //Importing MongClient and 
 
 const dbURL = `mongodb+srv://paul:k9jlqNaq27EbmVif@cluster0.gltre.mongodb.net/BookDetails?retryWrites=true&w=majority`
 const client = new MongoClient(dbURL)
+const app = express()
 
 
 let db = null
 let collectionRef = null
+
+const port_num = process.env.PORT || 4000
+
+app.listen(port_num , () => { //Starting the Server
+    console.log('Server Started!!!!')
+})
+ 
 
 async function init(){
     //connect to the database
@@ -25,7 +33,6 @@ async function init(){
 
 init()
 
-const app = express()
 
 app.use(express.urlencoded({extended: true}))
 
@@ -112,7 +119,3 @@ app.get('/', (req, res) => { // To get the Home page
 })
 
 
-app.listen(4000, () => { //Starting the Server
-    console.log('Server Started!!!!')
-})
- 

@@ -1,15 +1,26 @@
 {
   "name": "connectdb",
   "version": "1.0.0",
-  "description": "",
-  "main": "book.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "author": "",
+  "author": "PAUL",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "mongodb": "^4.1.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nileshwar-Paul-au17/heroku.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nileshwar-Paul-au17/heroku/issues"
+  },
+  "homepage": "https://github.com/Nileshwar-Paul-au17/heroku#readme",
+  "description": ""
 }
